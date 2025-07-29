@@ -25,10 +25,10 @@ def get_nearest(
 
     address = data.get("address", {})
     result = {
-        "street_no": address.get("house_number") or "",
-        "boulevard": address.get("road") or "",
-        "block": address.get("suburb") or address.get("neighbourhood") or address.get("quarter") or address.get("block") or "",
-        "city": address.get("city") or address.get("town") or "",
+        "street_no": address.get("house_number") or "Not available",
+        "boulevard": address.get("road") or "Not available",
+        "block": address.get("suburb") or address.get("neighbourhood") or address.get("quarter") or address.get("block") or "Not available",
+        "city": address.get("city") or address.get("town") or "Not available",
     }
     return result
 
